@@ -19,13 +19,34 @@ export class GameComponent implements OnInit {
   }
 
   crossRiver() {
-    if (this.currentPlayer.choice === "1"){
-      console.log(this.currentPlayer.choice);
+    var probability = 0;
+    if (this.currentPlayer.choice === 1){
+      probability = Math.floor(Math.random() * 100)+1;
+      if (probability > 20) {
+        this.currentPlayer.points = this.currentPlayer.points + 2;
+      } else {
+        this.currentPlayer.points = this.currentPlayer.points - 3;
+      }
 
-    }else if (this.currentPlayer.choice==="2") {
-      console.log(this.currentPlayer.choice);
+    }else if (this.currentPlayer.choice===2) {
+      probability = Math.floor(Math.random() * 100)+1;
+      if (probability > 50) {
+        this.currentPlayer.points = this.currentPlayer.points + 4;
+      } else {
+        this.currentPlayer.points = this.currentPlayer.points - 2;
+      }
+
+    }else if (this.currentPlayer.choice===3) {
+      probability = Math.floor(Math.random() * 100)+1;
+      if (probability > 80) {
+        this.currentPlayer.points = this.currentPlayer.points + 10;
+      } else {
+        this.currentPlayer.points = this.currentPlayer.points - 1;
+      }
     }else {
-      console.log(this.currentPlayer.choice);
+
     }
+
+    console.log(this.currentPlayer.points);
   }
 }
