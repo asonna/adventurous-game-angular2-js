@@ -1,0 +1,20 @@
+<h3>Create Player</h3>
+<div class="inputForm">
+  <div class="form-group">
+    <label>Player name:</label>
+    <input #newName>
+  </div>
+  <div class="form-group">
+    <label>Player height (in cms):</label>
+    <input #newHeight>
+  </div>
+  <div class="form-group">
+    <label>How adventurous are you?</label>
+    <select #newAdventurous>
+      <option value=1 selected>Not adventurous</option>
+      <option value=2>Kind of adventurous</option>
+      <option value=3>Very adventurous!</option>
+    </select>
+  </div>  
+  <button class="btn" (click)="createPlayer(newName.value, newHeight.value, newAdventurous.value)">Start!</button>
+</div>
