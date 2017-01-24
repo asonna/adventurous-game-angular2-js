@@ -10,4 +10,7 @@ export class PlayerService {
   savePlayer(newPlayer: Player) {
     players.push(newPlayer);
   }
+  getPlayer() {
+    return players[0];
+  }
 }
