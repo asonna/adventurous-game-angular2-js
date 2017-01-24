@@ -13,4 +13,11 @@ export class PlayerService {
   getPlayer() {
     return players[0];
   }
+  updatePlayer(currentPlayer) {
+    for (var i=0; i<players.length; i++) {
+      if (currentPlayer.name === players[i].name) {
+        players[i] = currentPlayer;
+      }
+    }
+  }
 }

@@ -1,9 +1,9 @@
-<h3>{{currentPlayer.name}}, {{currentPlayer.height}}, {{currentPlayer.adventure}}, {{currentPlayer.points}}</h3>
+<h3>Name: {{currentPlayer.name}}, height: {{currentPlayer.height}}, Score: {{currentPlayer.points}}</h3>
 
 <p>
   You're at a river, and you need to get to the other side. The river looks pretty deep. There's a rickety canoe on the shore next to you. There's an old, moldy rope bridge nearby.
 </p>
-<label>How will you get cross the river?</label>
+<label>How will you get across the river?</label>
 <br>
 <div #chosen>
   <input name= "choice" [(ngModel)]="currentPlayer.choice" type="radio" [value]="1"> Take the canoe.<br>
@@ -11,3 +11,5 @@
   <input name= "choice" [(ngModel)]="currentPlayer.choice" type="radio" [value]="3"> Wade through the water.<br>
 </div>
 <button (click)="crossRiver()">Cross the River!</button>
+
+<p>{{currentPlayer.message}}</p>

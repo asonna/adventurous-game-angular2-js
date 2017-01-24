@@ -1,0 +1,13 @@
+<h3>Name: {{currentPlayer.name}}, height: {{currentPlayer.height}}, Score: {{currentPlayer.points}}</h3>
+<p>{{currentPlayer.message}}</p>
+<p>
+  You must now pass through the deep dark forest to reach your destination. Beware of the lions, bears, and wolves! There are three different paths ahead of you. The path on the left goes down into a deep valley. The path in the middle passes through enormous trees. The path on the right climbs up a tall mountain.
+</p>
+<label>Which path will you take through the forest?</label>
+<br>
+<div #chosen>
+  <input name= "choice" [(ngModel)]="currentPlayer.choice" type="radio" [value]="1"> Valley path on the left.<br>
+  <input name= "choice" [(ngModel)]="currentPlayer.choice" type="radio" [value]="2"> Forest path in the middle.<br>
+  <input name= "choice" [(ngModel)]="currentPlayer.choice" type="radio" [value]="3"> Mountain path on the right.<br>
+</div>
+<button (click)="crossForest()">Cross the Forest!</button>

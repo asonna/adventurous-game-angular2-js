@@ -7,12 +7,16 @@ import {routing} from './app.routing';
 import { AppComponent } from './app.component';
 import { CreatePlayerComponent } from './create-player/create-player.component';
 import { GameComponent } from './game/game.component';
+import { WildlifeComponent } from './wildlife/wildlife.component';
+import { EndComponent } from './end/end.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreatePlayerComponent,
-    GameComponent
+    GameComponent,
+    WildlifeComponent,
+    EndComponent
   ],
   imports: [
     BrowserModule,

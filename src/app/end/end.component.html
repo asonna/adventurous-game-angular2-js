@@ -1,0 +1,14 @@
+<h3>Name: {{currentPlayer.name}}, height: {{currentPlayer.height}}, Score: {{currentPlayer.points}}</h3>
+<h4>{{currentPlayer.message}}</h4>
+
+<div [class]="success()" >
+  <h1>Congratulations!</h1>
+  <h4>You made it to your destination safely!</h4>
+</div>
+
+<div [class]="fail()">
+  <h1>Oh No!</h1>
+  <h4>You died! Bummer!</h4>
+</div>
+
+<button (click)="startOver()">Play Again!</button>
