@@ -6,8 +6,10 @@
 <label>Which path will you take through the forest?</label>
 <br>
 <div #chosen>
-  <input name= "choice" [(ngModel)]="currentPlayer.choice" type="radio" [value]="1"> Valley path on the left.<br>
-  <input name= "choice" [(ngModel)]="currentPlayer.choice" type="radio" [value]="2"> Forest path in the middle.<br>
-  <input name= "choice" [(ngModel)]="currentPlayer.choice" type="radio" [value]="3"> Mountain path on the right.<br>
+  <input (change)="updateImage()" name= "choice" [(ngModel)]="currentPlayer.choice" type="radio" [value]="1"> Valley path on the left.<br>
+  <input (change)="updateImage()" name= "choice" [(ngModel)]="currentPlayer.choice" type="radio" [value]="2"> Forest path in the middle.<br>
+  <input (change)="updateImage()" name= "choice" [(ngModel)]="currentPlayer.choice" type="radio" [value]="3"> Mountain path on the right.<br>
 </div>
 <button (click)="crossForest()">Cross the Forest!</button>
+<hr>
+<img src={{imageSource}} alt="" />

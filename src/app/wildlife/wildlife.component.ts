@@ -11,6 +11,7 @@ import {Router} from '@angular/router';
 })
 export class WildlifeComponent implements OnInit {
   currentPlayer: Player;
+  imageSource: string = "";
 
   constructor(private playerService: PlayerService, private router: Router) { }
 
@@ -18,6 +19,17 @@ export class WildlifeComponent implements OnInit {
     this.currentPlayer = this.playerService.getPlayer();
   }
 
+  updateImage() {
+    if (this.currentPlayer.choice === 1) {
+      this.imageSource = "../assets/images/valleyWolf.jpg";
+    } else if (this.currentPlayer.choice === 2) {
+      this.imageSource = "../assets/images/forestLion.jpg";
+    } else if (this.currentPlayer.choice === 3) {
+      this.imageSource = "../assets/images/mountainBear.jpg";
+    } else {
+      this.imageSource = "";
+    }
+  }
   crossForest() {
     var probability: number;
     if (this.currentPlayer.choice === 1){

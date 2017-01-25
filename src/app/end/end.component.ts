@@ -18,7 +18,9 @@ export class EndComponent implements OnInit {
   }
 
   startOver() {
-    this.router.navigate(['']);
+    this.currentPlayer.message = "";
+    this.currentPlayer.points = 5;
+    this.router.navigate(['game']);
   }
   success() {
     if (this.currentPlayer.points > 0){
